@@ -19,7 +19,7 @@ function displayValues() {
         sum += chip.count*chip.value;
     });
     localStorage.setItem("chips", JSON.stringify(chips));
-    sumDisplay.innerText = `Sum: ${sum}$`;
+    sumDisplay.innerText = `${sum}$`;
 }
 
 chips.forEach(chip => {
@@ -71,11 +71,13 @@ function defaultChips() {
         }
     ];
     displayValues();
+    document.location.reload(true)
 }
 
 function deleteChips() {
     chips.forEach(chip => {
         chip.count = 0;
-        displayValues();
     });
+    displayValues();
+    document.location.reload(true)
 }

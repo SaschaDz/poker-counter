@@ -10,14 +10,14 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Bebas Neue', cursive;
     color: white;
 }
 
 /* custom scrollbar */
     /* width */
     ::-webkit-scrollbar {
-        width: 10px;
+        width: 15px;
     }
     
     /* Track */
@@ -30,41 +30,41 @@ body {
         background: rgb(2, 82, 2);
         border-radius: 15px;
     }
-    
-    /* Handle on hover */
-    ::-webkit-scrollbar-thumb:hover {
-        width: 15px;
-    }
 
 h1 {
     background-color:rgb(14, 75, 14);
-    padding: 15px 20px;
-    margin: 5px auto;
+    padding: 5px 15px;
+    margin: 5px;
     border-radius: 50px;
     border: 2px solid black;
+    font-size: 2.5rem;
 }
 
-h1,h2 {
+h2 {
     text-align: center;
+    font-size: 2.5rem;
 }
 
 .chips-container {
+    width: 100%;
+    margin: auto;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    align-items: center;
     max-height: calc(100vh - 100px);
     overflow-y: scroll;
 }
 
 .chip {
     margin: 5px;
-    padding: 5px;
     background-color: rgb(14, 75, 14);
     border-radius: 60px;
     border: 2px solid black;
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.5);
 }
 
 .chip-image {
@@ -73,7 +73,7 @@ h1,h2 {
 }
 
 img {
-    max-width: 100%;
+    width: 100%;
 }
 
 .chip-value {
@@ -81,22 +81,40 @@ img {
     position: absolute;
     text-align: center;
     width: 100%;
-    font-size: 1.5em;
-    top: calc(50% - 15px);
+    font-size: 1.8em;
+    top: 30%;
     left: 0;
 }
 
 button {
+    background-color: inherit;
+    width: 50px;
+    height: 50px;
     margin: 5px;
     color: inherit;
-    background-color: inherit;
-    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.reset_trash {
+.reset {
     position: fixed;
-    top: 0;
-    right: 0;
-    padding: 10px;
+    top: 5px;
+    right: 5px;
     color: white;
+}
+
+.trash {
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    color: white;
+}
+
+.reset svg, .trash svg {
+    border: 2px solid black;
+    border-radius: 50%;
+    padding: 5px;
+    background-color: rgb(14, 75, 14);
 }
