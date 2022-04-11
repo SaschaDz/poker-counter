@@ -15,6 +15,28 @@ body {
     color: white;
 }
 
+/* custom scrollbar */
+    /* width */
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+    
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: green;
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: rgb(2, 82, 2);
+        border-radius: 15px;
+    }
+    
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        width: 15px;
+    }
+
 h1 {
     background-color:rgb(14, 75, 14);
     padding: 15px 20px;
