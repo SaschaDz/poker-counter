@@ -50,7 +50,7 @@ h2 {
     width: 100%;
     margin: auto;
     display: flex;
-    flex-flow: row;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
     max-height: calc(100vh - 100px);
@@ -127,10 +127,9 @@ button {
     background-color: rgb(14, 75, 14);
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 450px) {
     .chips-container {
         flex-direction: column;
-        padding-top: 200px;
     }
     .chip {
         flex-direction: row;
@@ -139,5 +138,22 @@ button {
         display: flex;
         flex-direction: row-reverse;
     }
+}
 
+@media screen and (max-height: 700px) {
+    .chips-container {
+        padding-top: 100px;
+    }
+}
+
+@media screen and (max-height: 600px) {
+    .chips-container {
+        padding-top: 150px;
+    }
+}
+
+@media screen and (max-height: 500px) {
+    .chips-container {
+        padding-top: 200px;
+    }
 }
