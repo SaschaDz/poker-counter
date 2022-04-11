@@ -1,5 +1,13 @@
 const sumDisplay = document.getElementById("sum");
+const container = document.getElementById("container");
 var sum = 0;
+
+function resizeContainer() {
+    container.style.height = `calc(100vh - ${sumDisplay.offsetHeight + 10}px)`;
+}
+
+window.onresize = resizeContainer;
+window.onload = resizeContainer;
 
 chips = JSON.parse(localStorage.getItem("chips") || "[]");
 
