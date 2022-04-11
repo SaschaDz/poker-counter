@@ -1,38 +1,11 @@
 const sumDisplay = document.getElementById("sum");
 var sum = 0;
 
-chips = [
-    {
-        color: "white",
-        text: "black",
-        value: 1,
-        count: 20
-    },
-    {
-        color: "red",
-        text: "white",
-        value: 2,
-        count: 15
-    },
-    {
-        color: "green",
-        text: "white",
-        value: 5,
-        count: 10
-    },
-    {
-        color: "blue",
-        text: "white",
-        value: 10,
-        count: 10
-    },
-    {
-        color: "black",
-        text: "white",
-        value: 50,
-        count: 5
-    }
-];
+chips = JSON.parse(localStorage.getItem("chips") || "[]");
+
+if (chips == "") {
+    defaultChips();
+}
 
 displayValues();
 function displayValues() {
@@ -45,6 +18,7 @@ function displayValues() {
         countDisplay.innerText = chip.count;
         sum += chip.count*chip.value;
     });
+    localStorage.setItem("chips", JSON.stringify(chips));
     sumDisplay.innerText = `Sum: ${sum}$`;
 }
 
@@ -62,3 +36,46 @@ chips.forEach(chip => {
         displayValues();
     });
 });
+
+function defaultChips() {
+    chips = [
+        {
+            color: "white",
+            text: "black",
+            value: 1,
+            count: 20
+        },
+        {
+            color: "red",
+            text: "white",
+            value: 2,
+            count: 15
+        },
+        {
+            color: "green",
+            text: "white",
+            value: 5,
+            count: 10
+        },
+        {
+            color: "blue",
+            text: "white",
+            value: 10,
+            count: 10
+        },
+        {
+            color: "black",
+            text: "white",
+            value: 50,
+            count: 5
+        }
+    ];
+    displayValues();
+}
+
+function deleteChips() {
+    chips.forEach(chip => {
+        chip.count = 0;
+        displayValues();
+    });
+}

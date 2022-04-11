@@ -92,3 +92,11 @@ button {
     background-color: inherit;
     border: none;
 }
+
+.reset_trash {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    color: white;
+}
