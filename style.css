@@ -53,8 +53,7 @@ h2 {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    
-    overflow-y: scroll;
+    overflow: scroll;
 }
 
 .chip {
