@@ -1,14 +1,16 @@
-const header = document.getElementsByTagName("header");
+const header = document.querySelector("header");
 const sumDisplay = document.getElementById("sum");
 const container = document.getElementById("container");
 var sum = 0;
 
-function resizeContainer() {
-    container.style.height = `calc(100vh - ${header.offsetHeight + 10}px)`;
-}
 
 window.onresize = resizeContainer;
 window.onload = resizeContainer;
+resizeContainer()
+function resizeContainer() {
+    container.style.Height = `calc(100vh - ${header.offsetHeight}px)`;
+}
+
 
 chips = JSON.parse(localStorage.getItem("chips") || "[]");
 

@@ -32,12 +32,13 @@ body {
     }
 
 header {
-    max-width: 600px;
-    width: 100%;
+    max-width: 450px;
+    margin: auto;
+    width: 80%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    
 }
 
 .reset, .trash  {
@@ -70,7 +71,7 @@ h2 {
 
 .chips-container {
     width: 100%;
-    margin: 20px auto;
+    margin: auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -79,8 +80,7 @@ h2 {
 }
 
 .chip {
-    margin: 10px;
-    padding: 0 5px 5px;
+    margin: 0 10px;
     background-color: rgb(14, 75, 14);
     border-radius: 60px;
     border: 2px solid black;
@@ -91,7 +91,8 @@ h2 {
 }
 
 .chip-image {
-    width: 100px;
+    width: 80px;
+    margin: -5px;
     position: relative;
 }
 
@@ -101,12 +102,13 @@ img {
 }
 
 .chip-value {
+    font-family:'Times New Roman', Times, serif;
     z-index: 10;
     position: absolute;
     text-align: center;
     width: 100%;
-    font-size: 1.8em;
-    top: 30%;
+    font-size: 1.2em;
+    top: 34%;
     left: 0;
 }
 
@@ -133,6 +135,7 @@ button {
 }
 
 .reset-accept, .trash-accept {
+    z-index: 10;
     width: 90%;
     max-width: 600px;
     padding: 10px 0;
@@ -156,15 +159,15 @@ button {
         align-items: center;
     }
     .chip {
+        margin: 10px;
         padding: 0;
-        max-width: 300px;
+        max-width: 250px;
         width: 100%;
         flex-direction: row;
     }
     .chip-counter {
         width: 70%;
         flex-direction: row-reverse;
-        justify-content: space-evenly;
     }
     .chip-counter>* {
         margin: 5px;
