@@ -31,6 +31,28 @@ body {
         border-radius: 15px;
     }
 
+header {
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.reset, .trash  {
+    color: white;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.5);
+    border-radius: 50%;
+}
+
+.reset svg, .trash svg {
+    border: 2px solid black;
+    border-radius: 50%;
+    padding: 5px;
+    background-color: rgb(14, 75, 14);
+}
+
 h1 {
     background-color:rgb(14, 75, 14);
     padding: 5px 15px;
@@ -48,7 +70,7 @@ h2 {
 
 .chips-container {
     width: 100%;
-    margin: auto;
+    margin: 20px auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -57,7 +79,8 @@ h2 {
 }
 
 .chip {
-    margin: 5px;
+    margin: 10px;
+    padding: 0 5px 5px;
     background-color: rgb(14, 75, 14);
     border-radius: 60px;
     border: 2px solid black;
@@ -74,6 +97,7 @@ h2 {
 
 img {
     width: 100%;
+    border-radius: 50%;
 }
 
 .chip-value {
@@ -84,6 +108,13 @@ img {
     font-size: 1.8em;
     top: 30%;
     left: 0;
+}
+
+.chip-counter {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .chip button {
@@ -101,40 +132,40 @@ button {
     align-items: center;
 }
 
-.reset {
+.reset-accept, .trash-accept {
+    width: 90%;
+    padding: 10px 0;
     position: fixed;
     top: 5px;
-    right: 5px;
-    color: white;
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.5);
-    border-radius: 50%;
-}
-
-.trash {
-    position: fixed;
-    top: 5px;
-    left: 5px;
-    color: white;
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.5);
-    border-radius: 50%;
-}
-
-.reset svg, .trash svg {
+    background-color: rgba(14, 75, 14, .8);
+    backdrop-filter: blur(5px);
+    border-radius: 60px;
     border: 2px solid black;
-    border-radius: 50%;
-    padding: 5px;
-    background-color: rgb(14, 75, 14);
+    display: none;
 }
 
-@media screen and (max-width: 600px) {
+.acceptance {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+@media screen and (max-width: 700px) {
     .chips-container {
         flex-direction: column;
+        align-items: center;
     }
     .chip {
+        padding: 0;
+        max-width: 300px;
+        width: 100%;
         flex-direction: row;
     }
     .chip-counter {
-        display: flex;
+        width: 70%;
         flex-direction: row-reverse;
+        justify-content: space-evenly;
+    }
+    .chip-counter>* {
+        margin: 5px;
     }
 }

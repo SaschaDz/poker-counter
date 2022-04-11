@@ -1,9 +1,10 @@
+const header = document.getElementsByTagName("header");
 const sumDisplay = document.getElementById("sum");
 const container = document.getElementById("container");
 var sum = 0;
 
 function resizeContainer() {
-    container.style.height = `calc(100vh - ${sumDisplay.offsetHeight + 10}px)`;
+    container.style.height = `calc(100vh - ${header.offsetHeight + 10}px)`;
 }
 
 window.onresize = resizeContainer;
@@ -88,4 +89,17 @@ function deleteChips() {
     });
     displayValues();
     document.location.reload(true)
+}
+
+function defaultChipsPrompt() {
+    document.querySelector(".reset-accept").style.display = "block";
+}
+
+function deleteChipsPrompt() {
+    document.querySelector(".trash-accept").style.display = "block";
+}
+
+function cancel() {
+    document.querySelector(".trash-accept").style.display = "none";
+    document.querySelector(".reset-accept").style.display = "none";
 }
