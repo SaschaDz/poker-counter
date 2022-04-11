@@ -57,7 +57,7 @@ h1,h2 {
 }
 
 .chip {
-    margin: 1rem;
+    margin: 5px;
     padding: 5px;
     background-color: rgb(14, 75, 14);
     border-radius: 60px;
