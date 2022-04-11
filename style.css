@@ -49,7 +49,7 @@ h2 {
     width: 100%;
     margin: auto;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row;
     justify-content: center;
     align-items: center;
     max-height: calc(100vh - 100px);
@@ -117,4 +117,18 @@ button {
     border-radius: 50%;
     padding: 5px;
     background-color: rgb(14, 75, 14);
+}
+
+@media screen and (max-width: 600px) {
+    .chips-container {
+        flex-direction: column;
+    }
+    .chip {
+        flex-direction: row;
+    }
+    .chip-counter {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
 }
