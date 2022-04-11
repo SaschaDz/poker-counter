@@ -139,21 +139,3 @@ button {
         flex-direction: row-reverse;
     }
 }
-
-@media screen and (max-height: 700px) and (max-width: 600px) {
-    .chips-container {
-        padding-top: 100px;
-    }
-}
-
-@media screen and (max-height: 600px) and (max-width: 600px) {
-    .chips-container {
-        padding-top: 150px;
-    }
-}
-
-@media screen and (max-height: 500px) and (max-width: 600px) {
-    .chips-container {
-        padding-top: 200px;
-    }
-}
