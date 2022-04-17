@@ -123,9 +123,11 @@ function cancel() {
     document.querySelector(".reset-accept").style.display = "none";
 }
 
+/*
 window.onresize = resizeContainer;
 window.onload = resizeContainer;
 resizeContainer()
 function resizeContainer() {
     container.style.Height = `calc(100vh - ${header.offsetHeight}px)`;
 }
+*/
